@@ -60,6 +60,10 @@ class TestContact(unittest.TestCase):
         self.assertEqual(self.new_contact.last_name, "Muriuki")
         self.assertEqual(self.new_contact.phone_number, "07122329112")
         self.assertEqual(self.new_contact.email, "james@msn.com")
+        
+    def tearDown(self):
+        """Breaks down and confirms that the length of each contact after saving a contact"""
+        Contact.contact_list = []
 ```
   - First we import unittest from python.
   - Then we import the Contact class from the contact module where our code is written.
