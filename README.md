@@ -61,9 +61,9 @@ class TestContact(unittest.TestCase):
         self.assertEqual(self.new_contact.phone_number, "07122329112")
         self.assertEqual(self.new_contact.email, "james@msn.com")
 ```
-  First we import unittest from python
-  Then we import the Contact class from the contact module where our code is written.
-  After importing our module dependencies, now we start writing test cases for our program.
+  - First we import unittest from python.
+  - Then we import the Contact class from the contact module where our code is written.
+  - After importing our module dependencies, now we start writing test cases for our program.
 ```Python3
 class TestContact(unittest.TestCase):
 ```
@@ -73,10 +73,10 @@ class TestContact(unittest.TestCase):
         """test create new contact instance"""
         self.new_contact = Contact("James", "Muriuki", "07122329112", "james@msn.com")
 ```
-  Then we write a setUp() function and pass in self as our arguement.
-  It represents our contact class from which we create new instances for our class object.
-  Next, we create a new contact object with first name, last name, phone number and email properties. 
-  We create these contexts using self with the (.) dot notation as seen in the code above.
+  - Then we write a setUp() function and pass in self as our arguement.
+  - It represents our contact class from which we create new instances for our class object.
+  - Next, we create a new contact object with first name, last name, phone number and email properties. 
+  - We create these contexts using self with the (.) dot notation as seen in the code above.
 ```Python3
 def test_init(self):
 ```
