@@ -86,10 +86,10 @@ def test_init(self):
 ```
   We then write test cases for our object initialization and pass in self as our arguement as seen above.
 ```Python3
-self.assertEqual(self.new_contact.first_name, "James")
-        self.assertEqual(self.new_contact.last_name, "Muriuki")
-        self.assertEqual(self.new_contact.phone_number, "07122329112")
-        self.assertEqual(self.new_contact.email, "james@msn.com")
+  self.assertEqual(self.new_contact.first_name, "James")
+  self.assertEqual(self.new_contact.last_name, "Muriuki")
+  self.assertEqual(self.new_contact.phone_number, "07122329112")
+  self.assertEqual(self.new_contact.email, "james@msn.com")
 ```
   Next, we use the self.assertEqual() method to check if the arguements in our object initialization are equal to the arguements passed in when creating a new contact object.
 ```Python3
