@@ -13,23 +13,23 @@ class Favorites:
     """ Empty contact list """
     favorites_list = []
     def __init__ (self, first_name, last_name, phone_number, email):
-        """ Initialize all the instances of the Favorites class """
+        """Initialize all the instances of the Favorites class"""
         self.first_name = first_name
         self.last_name = last_name
         self.phone_number = phone_number
         self.email = email
 
     def save_contact(self):
-        """ Save a contact """
+        """Save a contact"""
         self.favorites_list.append(self)
 
     def delete_contact(self):
-        """ delete a contact """
+        """Delete a contact"""
         self.favorites_list.remove(self)
 
     @classmethod
     def find_contact_by_number(cls, number):
-        """ Find a contact by checking the phone number """
+        """Find a contact by searching the phone number"""
         for contact in cls.favorites_list:
             if contact.phone_number == number:
                 return contact
@@ -37,7 +37,7 @@ class Favorites:
 
     @classmethod
     def contact_exists(cls, number):
-        """ check if a contact exists """
+        """Check if a contact exists"""
         for contact in cls.favorites_list:
             if contact.phone_number == number:
                 return True
@@ -45,15 +45,12 @@ class Favorites:
 
     @classmethod
     def display_contacts(cls):
-        """ display all contacts
-        """
+        """Display all contacts"""
         print(cls.favorites_list)
         return cls.favorites_list
 
     @classmethod
     def copy_email(cls, number):
-        """
-        copy and pasting email adress
-        """
+        """Copy and paste email adress"""
         found_contact = Favorites.find_contact_by_number(number)
         pyperclip.copy(found_contact.email)
