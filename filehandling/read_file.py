@@ -14,3 +14,15 @@ for word in data.split():
 print(data)
 """Closes our file module after reading"""
 handle_file.close()
+
+"""Using with operator to read a file"""
+with open("test.txt", "r") as handle:
+    data = handle.read()
+"""Loop through our lorem.txt file and check instances of the word lorem"""
+counter = 0 
+for word in data.split():
+    if word == "python":
+        counter += 1
+        print(counter)
+print(data)
+print(len(data))
