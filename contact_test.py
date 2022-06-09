@@ -59,8 +59,6 @@ class TestContact(unittest.TestCase):
         found_contact = Contact.find_by_number("07122383711")
         self.assertEqual(found_contact.email, contact1.email)
 
-    
-
 
 if __name__ == '__main__':
     unittest.main()

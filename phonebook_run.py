@@ -1,5 +1,4 @@
 from phonebook import Favorites
-from run import find_contact
 
 def create_contact(first_name, last_name, phone_number, email):
     """create a new fav contact"""
