@@ -15,7 +15,16 @@ class TestReadFiles(unittest.TestCase):
 
     def test_none_file(self):
         """Test check if we entered a wrong file path: Here we check if an assertion is raised when a wrong file is inputted."""
-        self.assertEqual(None, readfiles.read_file("lorem.txt"))
+        self.assertEqual(None, readfiles.read_file(""))
+
+    def test_longest_word(self):
+        """Test check for the longest word"""
+        txt_file = "lorem.txt"
+        with open(txt_file, "r") as handle:
+            data = handle.readlines()
+            for word in data:
+                return len(word)
+        self.assertEqual(data, readfiles.read_file("lorem.txt"))
 
 if __name__ == '__main__':
     unittest.main()

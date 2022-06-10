@@ -20,3 +20,10 @@ def read_file(text_file):
             return data
     except FileNotFoundError:
         return None
+
+def longest_word(text_file):
+    with open(text_file, "r") as handle:
+        data = handle.readlines()
+    for word in data:
+        return len(word)
+
