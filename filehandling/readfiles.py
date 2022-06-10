@@ -13,7 +13,7 @@ def read_file(text_file):
         data = handle.read()
         return data
 
-def read_file(text_file):
+def read_files(text_file):
     try:
         with open(text_file, "r") as handle:
             data = handle.read()

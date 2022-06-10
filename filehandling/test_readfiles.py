@@ -15,7 +15,7 @@ class TestReadFiles(unittest.TestCase):
 
     def test_none_file(self):
         """Test check if we entered a wrong file path: Here we check if an assertion is raised when a wrong file is inputted."""
-        self.assertEqual(None, readfiles.read_file(""))
+        self.assertEqual(None, readfiles.read_files(""))
 
     def test_longest_word(self):
         """Test check for the longest word"""
